@@ -1,0 +1,28 @@
+body {
+    background-image: url("img/world.png");
+    background-size: cover;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: fit-content;
+    margin: auto;
+    grid-gap: 10px;
+}
+
+.grid-item{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(249, 239, 229);
+    color: rgb(255, 127, 7);
+    font-size: 21px;
+    font-weight: bold;
+    border-radius: 15px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
