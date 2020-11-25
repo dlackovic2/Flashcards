@@ -3,6 +3,11 @@ body {
     background-size: cover;
 }
 
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -11,18 +16,48 @@ body {
     grid-gap: 10px;
 }
 
-.grid-item{
+.grid-item {
     width: 150px;
     height: 150px;
-    background-color: rgb(249, 239, 229);
+    border-radius: 15px;
     color: rgb(255, 127, 7);
+    background-color: rgb(249, 239, 229);
+    font-family: 'Quicksand', sans-serif;
     font-size: 21px;
     font-weight: bold;
-    border-radius: 15px;
-    font-family: 'Quicksand', sans-serif;
     text-align: center;
+    position: relative;
+    transition: all 0.5s linear;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
-h1 {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
+
+.grid-item:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: absolute;
+}
+
+.card-front{
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.card-back{
+    z-index: 0;
+    transform: rotateY(180deg);
+    color: rgb(249, 239, 229);
+    background-color: rgb(255, 127, 7);
+}
+
+.card {
+    z-index: 1;
 }
